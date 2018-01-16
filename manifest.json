@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "SJAM Essentials",
-  "short_name": "Jam ",
-  "version": "0.2",
-  "author": "Matthews Ma",
-  "author2": "Rohan Shetty",
+  "name": "n",
+  "short_name": "n",
+  "version": "0.0.2",
+  //"author": "Matthews Ma",
+  //"author2": "Rohan Shetty",
   "description": "extends",
   "icons": {
   },
@@ -20,11 +20,5 @@
   "chrome_url_overrides": {
     "newtab": "launch.html"
   },
-  "offline_enabled": true,
-  
-  "web_accessible_resources": ["calendar.png"],
-  
-  "assets": {
-    "1": "calendar.png"
-  }
+  "offline_enabled": true
 }
