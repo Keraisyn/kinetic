@@ -1,28 +1,118 @@
+html {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: none;
+}
+
 body {
-  background-image: url("http://wallpul.info/i/2016/12/wallpapers-4k-black-wallpaper-1080p-wallpapers.jpg");
+  width: 100%;
+  height: 100%;
+  animation: fadein 2s;
+  overflow: hidden;
   background-size: cover;
+  background-repeat: no-repeat;
+  background: absolute;
+  background-position: center;
+  background-color: grey;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 #header_main {
-  color: white;
+  color: orange;
   text-align: center;
-  font-family: "Gudea";
+  font-family: "Lato", sans-serif;
   font-size: 8vw;
   vertical-align: center;
+  /*text-shadow: -0.1vw 0 black, 0 0.1vw black, 0.1vw 0 black, 0 -0.1vw black;*/
+  
 }
 
 .icons #icons_all {
   width: 100%;
 }
 
-.icons #icons_calendar {
-  height: 8vw;
-  width: 8vw;
-  background-color: white;
-  border-radius: 50%;
-  margin-left: 30vw;
-}
-
 #cal_img {
   margin: auto;
+}
+
+#calendicon {
+  max-width: 8vw;
+  max-height: 8vw;
+  border-radius:75%;
+  background-color: white;
+  margin-left:30vw;
+  float:left;
+}
+
+#calendicon:hover {
+    transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2)); /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2);
+}
+#linksicon {
+  max-width: 8vw;
+  max-height: 8vw;
+  border-radius:75%;
+  margin-right:30vw;
+  float:right;
+}
+
+#linksicon:hover {
+    transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2)); /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2);
+}
+
+#calendmodal {
+  display: none;
+  z-index: 1; /* Sit on top */
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top:0;
+  margin-top:0;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius:25px;
+}
+
+#calendiframe {
+  margin:auto;
+  font-family:"Lato";
+}
+
+#infostuff {
+  float:right;
+  font-family:"Lato";
+  font-weight:bold;
+}
+
+#settingsicon {
+  float:right;
+  max-height:70vw;
+  max-width:70vw;
+  top:0;
+  right:0;
+  position:absolute;
+  opacity:1;
+}
+
+#settingsicon:hover {
+  opacity:0.7;
 }
