@@ -2,20 +2,26 @@
 <html>
   <head>
     <title>New Tab</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Gudea:700" rel="stylesheet">
+    <script src="/js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
-    <h1 id="header_main">SJAM Essentials</h1>
+    <img src="https://image.ibb.co/mLy48b/1554396_A_0_DAC_4795_82_FB_AC945_EDE1590.png" alt=settings border="0" id="settingsicon" height=70vw width=70vw/>
+    <h1 id="header_main">launch</h1>
     <div class="icons" id="icons_all">
       <div class="icons" id="icons_calendar">
-        <img src="https://preview.ibb.co/jE76Bm/calendar.png" alt="calendar" border="0" id="calendicon">
+        <img src='https://preview.ibb.co/jE76Bm/calendar.png' alt="calendar" border="0" id="calendicon"/>
       </div>
       <div class="icons" id="icons_links">
-        <img src="https://preview.ibb.co/nEu8P6/links_1.png" alt="links" border="0" id="linksicon">
+        <img src="https://preview.ibb.co/nEu8P6/links_1.png" alt="links" border="0" id="linksicon"/>
       </div>
     </div>
-    <!--currently this only shows the calendar directly on the page. functionality is yet to be added to dispaly calendar on click of calendar.png-->
-    <iframe src="https://calendar.google.com/calendar/embed?src=googleapps.wrdsb.ca_ptpdj55efmhg1nb89ruc15fi3k%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" visibility="hidden"></iframe>
+    <div id=calendmodal>
+      <div class="modal-content">
+        <iframe src="https://calendar.google.com/calendar/embed?src=googleapps.wrdsb.ca_ptpdj55efmhg1nb89ruc15fi3k%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" visibility="hidden" id="calendiframe"></iframe>
+        <p id=infostuff>For a more extensive calendar and<br>more school tools, visit <a href="http://jam.wrdsb.ca">The SJAM Website</a>.</p>
+      </div>
+    </div>
   </body>
 </html>
