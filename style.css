@@ -116,3 +116,16 @@ body {
 #settingsicon:hover {
   opacity:0.7;
 }
+
+body {
+  background-image: url("bridge.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: grey;
+}
+
+#header {
+  font-family: "Lato", sans-serif;
+  color: white;
+  text-align: center;
+}
