@@ -28,8 +28,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 8vw;
   vertical-align: center;
-  /*text-shadow: -0.1vw 0 black, 0 0.1vw black, 0.1vw 0 black, 0 -0.1vw black;*/
-  
+  text-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
 .icons #icons_all {
@@ -68,9 +67,9 @@ body {
     -webkit-transform: scale(1.2, 1.2);
 }
 
-#calendmodal {
-  display: none;
-  z-index: 1; /* Sit on top */
+.generalmodal {
+  display:none;
+  z-index: 2; /* Sit on top */
   position:absolute;
   left: 0;
   top: 0;
@@ -78,18 +77,20 @@ body {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
   padding-top:0;
   margin-top:0;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 2% auto; /* 15% from the top and centered */
+    margin: 2% auto; /* 2% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    height:auto;
     border-radius:25px;
+    pointer-events:none;
 }
 
 #calendiframe {
@@ -117,15 +118,38 @@ body {
   opacity:0.7;
 }
 
-body {
-  background-image: url("bridge.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: grey;
+#textColor, #status, #save{
+  margin:auto;
 }
 
-#header {
-  font-family: "Lato", sans-serif;
-  color: white;
+#clock {
+  margin:auto;
+  font-family:"Lato";
+  color:orange;
+  font-size: 4vw;
   text-align: center;
+  text-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+#settingsh {
+  font-family:"Lato";
+  font-weight:bold;
+  font-size:2vw;
+}
+
+.options {
+    padding: 0.7vw;
+    size:2vw;
+    background-color: orange;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size:1vw;
+    margin:2vw 2vw;
+    font-family:"Lato";
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    margin: 0.4vw 0.2vw;
+    cursor: pointer;
 }
