@@ -1,6 +1,5 @@
 /* Background images */
 function background() {
-  
   var backgroundImages = [
     "/backgrounds/background_01.jpeg",
     "/backgrounds/background_02.jpeg",
@@ -9,16 +8,40 @@ function background() {
     "/backgrounds/background_05.jpeg",
     "/backgrounds/background_06.jpeg",
     "/backgrounds/background_07.jpeg"
-    ];
-    
-  var random = Math.floor(Math.random() * backgroundImages.length);
+  ];
   
-  image = "url(" + backgroundImages[random] + ")";
+  image = "url(" + backgroundImages[Math.floor(Math.random() * backgroundImages.length)] + ")";
+  
   document.body.style.backgroundImage = image;
 }
 
+function clock() {
+  
+  var time = new Date(),
+    h = time.getHours(),
+    m = time.getMinutes(),
+    z = " am";
+  
+  if (h >= 12) {
+    z = " pm";
+  }
+  
+  if (h > 12) {
+    h -= 12;
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i; }  // add zero in front of numbers < 10
+    m = i;
+  }
+
+  checkTime(m);
+  document.getElementById("clock").innerHTML = h + ":" + m + z;
+  var t = setTimeout(clock, 500);
+}
+
 /* Calendar button */
-function calendar() {
+function calendar(event) {
   document.getElementById("calendmodal").style.display = "block";
 }
 
@@ -28,19 +51,38 @@ function links() {
 }
 
 /* Calendar Modal */
-function calendarModal() {
-  document.getElementById("calendmodal").style.display = "none";
+function closeModal() {
+    document.getElementById("calendmodal").style.display = "none";
 }
 
-/* Close button */
-function close() {
-  document.getElementById("calendmodal").style.display = "none";
+function optionsModal() {
+  document.getElementById("optionsmodal").style.display = "none";
 }
 
+/* Settings Button */
+function settingsModal() {
+  document.getElementById("optionsmodal").style.display = "block";
+}
+
+function save_options() {
+  var textColor = document.getElementById("textColor").value;
+  chrome.storage.sync.set({
+    textColor: textColor
+  }, function () {
+    var status = document.getElementById("status");
+    status.textContent = "Options saved.";
+    setTimeout(function () {
+      status.textContent = "";
+    }, 750);
+  });
+}
 /* Main */
 document.addEventListener("DOMContentLoaded", function () {
-  background();
   document.getElementById("calendicon").addEventListener("click", calendar);
   document.getElementById("linksicon").addEventListener("click", links);
-  document.getElementById("calendmodal").addEventListener("click", calendarModal);
+  document.getElementById("settingsicon").addEventListener("click", settingsModal);
+  document.getElementById("save").addEventListener("click", save_options);
+  document.getElementById("calendmodal").addEventListener("click", closeModal);
+  background();
+  clock();
 });
