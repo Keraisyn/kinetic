@@ -50,11 +50,6 @@ function links() {
   alert("i am a lINks");
 }
 
-/* Calendar Modal */
-function closeModal() {
-    document.getElementById("calendmodal").style.display = "none";
-}
-
 function optionsModal() {
   document.getElementById("optionsmodal").style.display = "none";
 }
@@ -82,7 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("linksicon").addEventListener("click", links);
   document.getElementById("settingsicon").addEventListener("click", settingsModal);
   document.getElementById("save").addEventListener("click", save_options);
-  document.getElementById("calendmodal").addEventListener("click", closeModal);
+  document.getElementById("calendmodal").addEventListener("click", function(event){
+    if (event.target !== this)
+      return;
+      document.getElementById("calendmodal").style.display = "none";
+  });
   background();
   clock();
 });
