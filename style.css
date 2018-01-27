@@ -90,7 +90,7 @@ body {
     width: 80%;
     height:auto;
     border-radius:25px;
-    pointer-events:none;
+    z-index:1;
 }
 
 #calendiframe {
