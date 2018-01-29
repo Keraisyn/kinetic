@@ -40,48 +40,35 @@ function clock() {
   var t = setTimeout(clock, 500);
 }
 
-/* Calendar button */
-function calendar(event) {
+// Calendar button
+function calendar() {
   document.getElementById("calendmodal").style.display = "block";
 }
 
-/* Links button */
-function links() {
-  alert("i am a lINks");
+function closeCalendar(e) {
+  if (e.target === this) {
+    this.style.display = "none";
+  }
 }
 
-function optionsModal() {
-  document.getElementById("optionsmodal").style.display = "none";
+// Settings Button
+function linksModal() {
+  document.getElementById("linksmodal").style.display = "block";
 }
 
-/* Settings Button */
-function settingsModal() {
-  document.getElementById("optionsmodal").style.display = "block";
+function closeLinks(e) {
+  if (e.target === this) {
+    this.style.display = "none";
+  }
 }
 
-function save_options() {
-  var textColor = document.getElementById("textColor").value;
-  chrome.storage.sync.set({
-    textColor: textColor
-  }, function () {
-    var status = document.getElementById("status");
-    status.textContent = "Options saved.";
-    setTimeout(function () {
-      status.textContent = "";
-    }, 750);
-  });
-}
 /* Main */
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("calendicon").addEventListener("click", calendar);
-  document.getElementById("linksicon").addEventListener("click", links);
-  document.getElementById("settingsicon").addEventListener("click", settingsModal);
-  document.getElementById("save").addEventListener("click", save_options);
-  document.getElementById("calendmodal").addEventListener("click", function(event){
-    if (event.target !== this)
-      return;
-      document.getElementById("calendmodal").style.display = "none";
-  });
+  document.getElementById("linksicon").addEventListener("click", linksModal);
+  document.getElementById("calendmodal").addEventListener("click", closeCalendar);
+  document.getElementById("linksmodal").addEventListener("click", closeLinks);
   background();
   clock();
+  
 });
