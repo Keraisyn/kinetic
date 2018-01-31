@@ -14,7 +14,7 @@ body {
   background-repeat: no-repeat;
   background: absolute;
   background-position: center;
-  background-color: grey;
+  background-color: white;
 }
 
 @keyframes fadein {
@@ -33,7 +33,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 8vw;
   vertical-align: center;
-  text-shadow: 0 0 25px rgba(0,0,0,0.5);
+  text-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
 
 .icons #icons_all {
@@ -54,9 +54,9 @@ body {
 }
 
 #calendicon:hover {
-    transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2)); /* IE 9 */
-    -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2)); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2);
 }
 #linksicon {
   max-width: 8vw;
@@ -103,11 +103,14 @@ body {
   font-family:"Lato";
 }
 
-#infostuff {
-  float:right;
+.infostuff {
   font-family:"Lato";
   font-weight:bold;
   font-size:1vw;
+}
+
+#calendinfo {
+  float:right;
 }
 
 #clock {
@@ -167,3 +170,30 @@ body {
   background-color: #2098D1;
   color: white;
 }
+
+#linksinfo {
+  margin-left:2vw;
+}
+
+#hideAll
+ {
+   position: fixed;
+   left: 0px; 
+   right: 0px; 
+   top: 0px; 
+   bottom: 0px; 
+   background-color: white;
+   z-index: 100000000000;
+   opacity:1;
+   display:block;
+ }
+ 
+ #loading {
+   font-family:"Lato";
+   font-size:3vw;
+   margin:auto;
+   margin-top:50%;
+   text-align:center;
+   vertical-align:middle;
+   content:"ok";
+ }
