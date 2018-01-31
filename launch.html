@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body id=body>
+    <div id="hideAll"><p id=loading></p></div>
     <h1 id="header_main">launch</h1>
     <h2 id="clock"></h2>
     <script src="/js/scripts.js"></script>
@@ -15,13 +16,13 @@
         <img src='https://preview.ibb.co/jE76Bm/calendar.png' alt="calendar" border="0" id="calendicon"/>
       </div>
       <div class="icons" id="icons_links">
-        <img src="https://image.ibb.co/hsHxOm/7_D7633_B2_B90_E_41_E2_BF50_AFC1_EEE119_A3.png" alt="links" border="0" id="linksicon"/>
+        <img src="https://image.ibb.co/h6sfw6/D1_DEE33_F_1_F0_B_480_B_A613_35_DE3_DFC8_BEA.jpg" alt="links" border="0" id="linksicon"/>
       </div>
     </div>
     <div id=calendmodal class="generalmodal">
       <div class="modal-content" id="calendcontent">
         <iframe src="https://calendar.google.com/calendar/embed?src=googleapps.wrdsb.ca_ptpdj55efmhg1nb89ruc15fi3k%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" visibility="hidden" id="calendiframe"></iframe>
-        <p id=infostuff>For a more extensive calendar and<br>more school tools, visit <a href="https://jam.wrdsb.ca" id="jamsite">The SJAM Website</a>.</p>
+        <p class=infostuff id="calendinfo">For a more extensive calendar and<br>more school tools, visit <a href="https://jam.wrdsb.ca" id="jamsite">The SJAM Website</a>.</p>
       </div>
     </div>
     <div id="linksmodal" class="generalmodal">
@@ -31,6 +32,7 @@
         <button class=linkbuttons><a href=https://jam.wrdsb.ca class=somelinks>SJAM Website</a></button><br><br>
         <button class=linkbuttons><a href=https://drive.google.com class=somelinks>Google Drive</a></button><br><br>
         <button class=linkbuttons><a href=https://classroom.google.com class=somelinks>Google Classroom</a></button><br><br>
+        <p class="infostuff" id=linksinfo>More links will be added later depending on demand.</p>
       </div>
     </div>
   </body>
