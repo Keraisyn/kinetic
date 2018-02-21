@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html id="Hi I'm Rohan and I did the most work on this app. Don't trust the other dev." rel="I am also mentally unstable.">
+
+<head>
+  <title>New Tab</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Hind" rel="stylesheet">
+</head>
+
+<body>
+  <div id="hide-all">
+    <p id="loading"></p>
+  </div>
+  <script src="/js/scripts.js"></script>
+  <h1 id="header-main">kinetic</h1>
+  <h2 id="clock"></h2>
+  <div class="icons">
+    <img src='https://preview.ibb.co/jE76Bm/calendar.png' alt="calendar" border="0" id="calendar-icon">
+    <img src="https://image.ibb.co/mWyERH/B5_F8_AB1_A_FF45_4_DA4_8846_2_DC5555_BC2_A2.png" alt="B5 F8 AB1 A FF45 4 DA4 8846 2 DC5555 BC2 A2" border="0" id="timetable-icon" />
+    <img src="https://image.ibb.co/h6sfw6/D1_DEE33_F_1_F0_B_480_B_A613_35_DE3_DFC8_BEA.jpg" alt="links" border="0" id="links-icon">
+  </div>
+  <div class="general-modal" id=calendar-modal>
+    <div class="modal-content">
+      <iframe src="https://calendar.google.com/calendar/embed?src=googleapps.wrdsb.ca_ptpdj55efmhg1nb89ruc15fi3k%40group.calendar.google.com&ctz=America%2FToronto"
+        style="border: 0" width="800" height="600" frameborder="0" scrolling="no" visibility="hidden" id="calendar-modal__iframe"></iframe>
+      <div id="calendar-modal__info">
+        <form id="calendar-modal__info">
+          <p class=info>Want to integrate your own calendar
+            <br> in this space? Enter the public URL below:
+            <br>
+          </p>
+          <input type="text" id="calendar-link">
+        </form>
+        <button class=calendar-modal__buttons id="submit">Submit</button>
+        <button id="calendar-modal__default-calendar" class=calendar-modal__buttons>Reset</button>
+        <p class=info>
+          <br>Learn how to get the
+          <a href=https://support.google.com/calendar/answer/37083?hl=en>Public URL</a>.</p>
+        <p class=info>For a more extensive calendar and
+          <br>more school tools, visit
+          <a href="https://jam.wrdsb.ca" id="modal-content__sjam-website-link">The SJAM Website</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div id="timetable-modal" class="general-modal">
+    <div class="modal-content">
+      <p class=info id=timeinfo>Simply click on one of the "Period" cells to edit it. If the table becomes too big, scroll to see the rest.</p>
+      <table id=timetable-modal__timetable contenteditable>
+        <tr>
+          <th>Time</th>
+          <td contenteditable="False"><input type=time>-<input type=time></td>
+          <td contenteditable="False"><input type=time>-<input type=time></td>
+          <td contenteditable="False"><input type=time>-<input type=time></td>
+          <td contenteditable="False"><input type=time>-<input type=time></td>
+          <td contenteditable="False"><input type=time>-<input type=time></td>
+        </tr>
+        <tr>
+          <th>Day 1</th>
+          <td>Period A</td>
+          <td>Period B</td>
+          <td>Lunch</td>
+          <td>Period D</td>
+          <td>Period E</td>
+        </tr>
+        <tr>
+          <th>Day 2</th>
+          <td>Period A</td>
+          <td>Period B</td>
+          <td>Lunch</td>
+          <td>Period E</td>
+          <td>Period D</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="links-modal" class="general-modal">
+    <div class="modal-content">
+      <h3 id=linksh>Links</h3>
+      <h5 id=links-modal__sublinks>Helpful resources you may use often</h5>
+      <a href=https://jam.wrdsb.ca class=links-modal__links>
+        <button class=links-modal__link-buttons>SJAM Website</button>
+      </a>
+      <br>
+      <br>
+      <a href=https://drive.google.com class=links-modal__links>
+        <button class=links-modal__link-buttons>Google Drive</button>
+      </a>
+      <br>
+      <br>
+      <a href=https://classroom.google.com class=links-modal__links>
+        <button class=links-modal__link-buttons>Google Classroom</button>
+      </a>
+      <br>
+      <br>
+      <a href=https://myway.wrdsb.ca class=links-modal__links>
+        <button class=links-modal__link-buttons>MyWay (WRDSB)</button>
+      </a>
+      <br>
+      <br>
+      <a href=https://youtu.be class=links-modal__links>
+        <button class=links-modal__link-buttons>YouTube</button>
+      </a>
+      <br>
+      <br>
+      <p class="info" id=linksinfo>More links will be added later depending on demand.</p>
+    </div>
+  </div>
+  <a href="https://plus.google.com/u/2/collection/Mst7XE" target=_blank>
+    <div id=notif-box>
+      <div id=notif-container>
+        <span class=helper></span>
+        <img src="https://image.ibb.co/fM5dqn/2_CA0_C68_F_9_C76_4624_BD17_7_E58_ED89_E19_B.png" alt="update-notes" border="0" id="notif-img"
+        />
+        <p id=notif-txt>What's new in update 0.9!</p>
+      </div>
+    </div>
+  </a>
+  <p id=bottom>Help make kinetic better!
+    <!--Can't make it better if it's already perfect am i right-->Send in suggestions and feedback to
+    <a href=mailto:launchdevteam@gmail.com>launchdevteam@gmail.com</a>.</p>
+</body>
+
+</html>
