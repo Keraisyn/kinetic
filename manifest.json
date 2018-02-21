@@ -1,24 +1,30 @@
 {
   "manifest_version": 2,
-  "name": "n",
-  "short_name": "n",
-  "version": "0.5",
-  //"author": "Matthews Ma",
-  //"author2": "Rohan Shetty",
-  "description": "extends",
+  "name": "kinetic",
+  "short_name": "kinetic",
+  "version": "0.8.6",
+  "description": "A beautiful, minimalist, functional New Tab.",
   "icons": {
+    "16" : "/icons/icon16.png",
+    "128": "/icons/icon128.png"
   },
   "browser_action": {
-    "default_title": "n"
+    "default_title": "kinetic"
   },
   "background": {
     "scripts": [
-      "events.js"
-      ],
+      "/js/events.js"
+    ],
     "persistent": false
   },
   "chrome_url_overrides": {
-    "newtab": "launch.html"
+    "newtab": "/kinetic.html"
   },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+  "permissions": ["storage"],
   "offline_enabled": true
 }
